@@ -78,11 +78,11 @@ function handleImageClick(event) {
    			}, 1000); no longer needed with overlay*/
    			$('#overlay').css('width', '100vw');
    			$('#overlay').css('margin-left', '-50vw');
-   			//$('.overlay-text').css('margin','6vh');
+   			$('.overlay-text').css('margin','6vh 1vw');
 		} else {
 			$('#overlay').css('width', '40vw');
    			$('#overlay').css('margin-left', '-20vw');
-   			//$('.overlay-text').css('margin','10vh');
+   			$('.overlay-text').css('margin','10vh 1vw');
 		}
 	}
 	
