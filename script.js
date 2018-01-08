@@ -42,12 +42,12 @@ function handleImageClick(event) {
 	const imgSrc = target.attr('src');
 	const sources = ['resources/bruinplay.png','resources/cruisinbruins.png','resources/ytplaylist.png','resources/hangman.png','resources/fbmessages.png','resources/starsearch.png'];
 	const names = ['Bruin Play','Cruisin\' Bruins', 'Youtube Playlist','Hangman Game','Messenger Reader','Star Search'];
-	const descriptions = [	'A web application that plays uploaded songs, final project in ACM Hack School--a full stack web dev course with Node.js. (HTML, CSS, JavaScript)',
-							'A website that suggests activities around UCLA based on criteria such as price and transportation. (HTML, CSS, JavaScript)',
-							'A Youtube playlist is made from every video ever sent to my Facebook Messenger account. It is based off tutorial from Julian Knodt. (JavaScript)',
-							'A Harry Potter themed Hangman game, my final group project in AP Computer Science. (Java)',
-							'A program to filter messages from the Facebook messenger archive by person and date, in chronological order. (JavaScript)',
-							'A game to guess a secret word along with a helper AI that suggests words to win the game. (C++)']
+	const descriptions = [	'A web application that plays uploaded songs, final project from ACM Hack School (HTML, CSS, JavaScript)',
+							'A website that suggests activities around UCLA based on certain criteria (HTML, CSS, JavaScript)',
+							'A Youtube playlist made from all videos sent to my Facebook account, based off Julian Knodt\'s tutorial (JavaScript)',
+							'A Harry Potter themed Hangman game, my final group project in AP Computer Science (Java)',
+							'A program to filter messages from my Facebook archive by person and date (JavaScript)',
+							'A game to guess a secret word and a helper AI that suggests words to win the game (C++)']
 	const links = ["https://github.com/kristielim/BruinPlay","https://github.com/kristielim/hothproject","https://goo.gl/dr76Pg","https://github.com/alveerak/hangman","https://goo.gl/pxypWU", "https://goo.gl/5NEk2j"];
 
 	if(target.hasClass('selected')) {
@@ -78,11 +78,11 @@ function handleImageClick(event) {
    			}, 1000); no longer needed with overlay*/
    			$('#overlay').css('width', '100vw');
    			$('#overlay').css('margin-left', '-50vw');
-   			$('.overlay-text').css('margin','20px');
+   			$('.overlay-text').css('margin','6vh');
 		} else {
 			$('#overlay').css('width', '40vw');
    			$('#overlay').css('margin-left', '-20vw');
-   			$('.overlay-text').css('margin','60px');
+   			$('.overlay-text').css('margin','10vh');
 		}
 	}
 	
