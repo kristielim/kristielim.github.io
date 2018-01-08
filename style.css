@@ -108,17 +108,17 @@ p {
 
 .content{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-left:  100px;
-	padding-right: 100px;
+	padding-left:  150px;
+	padding-right: 150px;
 	background-image: url("resources/sky.jpg");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 200px;
+    padding-bottom: 250px;
     padding-top: 100px;
 }
 
