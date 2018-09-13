@@ -146,13 +146,23 @@ body {
 }
 
 #flower-1, #flower-1:before {
+	animation-delay: -40s;
+	-webkit-animation-delay: -40s;
+}
+
+#flower-2, #flower-2:before {
 	animation-delay: -80s;
 	-webkit-animation-delay: -80s;
 }
 
-#flower-2, #flower-2:before {
+#flower-3, #flower-3:before {
+	animation-delay: -120s;
+	-webkit-animation-delay: -120s;
+}
+
+#flower-4, #flower-4:before {
 	animation-delay: -160s;
-	-webkit-animation-delay: -1600s;
+	-webkit-animation-delay: -160s;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -186,9 +196,9 @@ body {
 }
 
 @keyframes rotateAboutCenter {
-	0%   {transform: translate(-50%, -50%) rotate(0deg) translate(-160px);}
-	25%  {transform: translate(-50%, -50%) rotate(90deg) translate(-160px);}
-	50%  {transform: translate(-50%, -50%) rotate(180deg) translate(-160px);}
-	75%  {transform: translate(-50%, -50%) rotate(270deg) translate(-160px);}
-	100% {transform: translate(-50%, -50%) rotate(360deg) translate(-160px);}
+	0%   {transform: translate(-50%, -50%) rotate(0deg) translate(-180px);}
+	25%  {transform: translate(-50%, -50%) rotate(90deg) translate(-180px);}
+	50%  {transform: translate(-50%, -50%) rotate(180deg) translate(-180px);}
+	75%  {transform: translate(-50%, -50%) rotate(270deg) translate(-180px);}
+	100% {transform: translate(-50%, -50%) rotate(360deg) translate(-180px);}
 }
