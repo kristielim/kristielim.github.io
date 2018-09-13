@@ -33,24 +33,6 @@ body {
 	-webkit-animation: bob 15s linear infinite;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes bob {
-	0%   {transform: translate(0px, 0px);}
-	25% {transform: translate(5px,5px)}
-	50% {transform: translate(10px,0px)}
-	75% {transform: translate(5px,5px)}
-    100% {transform: translate(0px, 0px);}
-}
-
-/* Standard syntax */
-@keyframes bob {
-    0%   {transform: translate(0px, 0px);}
-	25% {transform: translate(5px,5px)}
-	50% {transform: translate(10px,0px)}
-	75% {transform: translate(5px,5px)}
-    100% {transform: translate(0px, 0px);}
-}
-
 .lilypad:before {
 	content: "";
 	position: absolute;
@@ -84,18 +66,6 @@ body {
 #lilypad-4, #lilypad-4:before {
 	animation-delay: -80s;
 	-webkit-animation-delay: -80s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes rotate {
-    0%   {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
-
-/* Standard syntax */
-@keyframes rotate {
-    0%   {transform: rotate(0deg);}
-	100% {transform: rotate(360deg);}
 }
 
 .lilypad-icon {
@@ -138,13 +108,31 @@ body {
 	transform: scale(1.1,1.1);
 }
 
-.center-name {
-	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
-	text-align: center;
+.center {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.center-flower {
+	background-size: contain;
+	background-image: url(./images/flower.png);
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+
+	animation: bob 15s linear infinite;
+	-webkit-animation: bob 15s linear infinite;
+
+	animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
+	-webkit-animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
+}
+
+.center-name {
+	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+	text-align: center;
+	
 }
 
 .center-first-name {
@@ -153,4 +141,34 @@ body {
 
 .center-last-name {
 	font-size: 72px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes bob {
+	0%   {transform: translate(0px, 0px);}
+	25% {transform: translate(10px,10px)}
+	50% {transform: translate(10px,-10px)}
+	75% {transform: translate(-10px,10px)}
+    100% {transform: translate(0px, 0px);}
+}
+
+/* Standard syntax */
+@keyframes bob {
+    0%   {transform: translate(0px, 0px);}
+	25% {transform: translate(10px,10px)}
+	50% {transform: translate(10px,-10px)}
+	75% {transform: translate(-10px,10px)}
+    100% {transform: translate(0px, 0px);}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
