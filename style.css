@@ -29,8 +29,8 @@ body {
 	overflow: hidden;
 	position: relative;
 
-	animation: bob 4s linear infinite;
-	-webkit-animation: bob 4s linear infinite;
+	animation: bob 15s linear infinite;
+	-webkit-animation: bob 15s linear infinite;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -62,8 +62,28 @@ body {
 	background-image: url("images/lilypad.png");
 	background-size: contain;
 
-	animation: rotate 4s ease infinite;
-	-webkit-animation: rotate 4s ease infinite;
+	animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
+	-webkit-animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
+}
+
+#lilypad-1, #lilypad-1:before {
+	animation-delay: -20s;
+	-webkit-animation-delay: -20s;
+}
+
+#lilypad-2, #lilypad-2:before {
+	animation-delay: -40s;
+	-webkit-animation-delay: -40s;
+}
+
+#lilypad-3, #lilypad-3:before {
+	animation-delay: -60s;
+	-webkit-animation-delay: -60s;
+}
+
+#lilypad-4, #lilypad-4:before {
+	animation-delay: -80s;
+	-webkit-animation-delay: -80s;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -118,7 +138,7 @@ body {
 	transform: scale(1.1,1.1);
 }
 
-.name {
+.center-name {
 	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
 	text-align: center;
 	position: fixed;
@@ -127,10 +147,10 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.name-first {
+.center-first-name {
 	font-size: 100px;
 }
 
-.name-last {
+.center-last-name {
 	font-size: 72px;
 }
