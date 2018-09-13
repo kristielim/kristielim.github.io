@@ -108,15 +108,25 @@ body {
 	transform: scale(1.1,1.1);
 }
 
-.center > div {
+.name {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+	text-align: center;
 	z-index: -1;
 }
 
-.center-flower {
+.name-first {
+	font-size: 100px;
+}
+
+.name-last {
+	font-size: 72px;
+}
+
+.flower {
 	background-size: contain;
 	background-image: url(./images/flower.png);
 	height: 150px;
@@ -125,28 +135,18 @@ body {
 	top: 50%;
 	left: 50%;
 
-	animation: bob 15s linear infinite;
-	-webkit-animation: bob 15s linear infinite;
-
-	animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
-	-webkit-animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
-
-	animation: rotateAboutCenter 80s linear infinite;
-	-webkit-animation: rotateAboutCenter 80s linear infinite;
+	animation: rotateAboutCenter 160s linear infinite;
+	-webkit-animation: rotateAboutCenter 160s linear infinite;
 }
 
-.center-name {
-	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
-	text-align: center;
-	
+#flower-1 {
+	animation-delay: -80s;
+	-webkit-animation-delay: -80s;
 }
 
-.center-first-name {
-	font-size: 100px;
-}
-
-.center-last-name {
-	font-size: 72px;
+#flower-2 {
+	animation-delay: -160s;
+	-webkit-animation-delay: -160s;
 }
 
 /* Safari 4.0 - 8.0 */
