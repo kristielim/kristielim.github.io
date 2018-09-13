@@ -19,13 +19,63 @@ body {
 }
 
 .lilypad {
-	background-image: url("images/lilypad.png");
-	background-size: contain;
 	height: 200px;
 	width: 200px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	overflow: hidden;
+	position: relative;
+
+	animation: bob 4s linear infinite;
+	-webkit-animation: bob 4s linear infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes bob {
+	0%   {transform: translate(0px, 0px);}
+	25% {transform: translate(5px,5px)}
+	50% {transform: translate(10px,0px)}
+	75% {transform: translate(5px,5px)}
+    100% {transform: translate(0px, 0px);}
+}
+
+/* Standard syntax */
+@keyframes bob {
+    0%   {transform: translate(0px, 0px);}
+	25% {transform: translate(5px,5px)}
+	50% {transform: translate(10px,0px)}
+	75% {transform: translate(5px,5px)}
+    100% {transform: translate(0px, 0px);}
+}
+
+.lilypad:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+
+	height: 200px;
+	width: 200px;
+
+	background-image: url("images/lilypad.png");
+	background-size: contain;
+
+	animation: rotate 4s ease infinite;
+	-webkit-animation: rotate 4s ease infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
 
 .lilypad-icon {
@@ -56,12 +106,10 @@ body {
 	font-weight: bold;
 	font-size: 48px;
 	text-align: center;
-}
 
-.lilypad-text {
 	-webkit-transition: transform 0.5s;
-	transition: transform 0.5s;
 	-webkit-transition-timing-function: ease-out;
+	transition: transform 0.5s;
 	transition-timing-function: ease-out;
 }
 
