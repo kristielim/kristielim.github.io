@@ -1,5 +1,4 @@
 * {
-	border: 2px solid red;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -93,7 +92,6 @@ body {
 
 .lilypad-text {
 	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
-	font-weight: bold;
 	font-size: 48px;
 	text-align: center;
 
@@ -127,26 +125,34 @@ body {
 }
 
 .flower {
-	background-size: contain;
-	background-image: url(./images/flower.png);
-	height: 150px;
-	width: 150px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 
-	animation: rotateAboutCenter 160s linear infinite;
-	-webkit-animation: rotateAboutCenter 160s linear infinite;
+	animation: bob 15s linear infinite;
+	-webkit-animation: bob 15s linear infinite;
 }
 
-#flower-1 {
+.flower:before {
+	content: "";
+	background-size: contain;
+	background-image: url("images/flower.png");
+	height: 150px;
+	width: 150px;
+	position: absolute;
+
+	animation: rotateAboutCenter 160s cubic-bezier(.6, 0, .3, 1) infinite;
+	-webkit-animation: rotateAboutCenter 160s cubic-bezier(.6, 0, .3, 1) infinite;
+}
+
+#flower-1, #flower-1:before {
 	animation-delay: -80s;
 	-webkit-animation-delay: -80s;
 }
 
-#flower-2 {
+#flower-2, #flower-2:before {
 	animation-delay: -160s;
-	-webkit-animation-delay: -160s;
+	-webkit-animation-delay: -1600s;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -180,6 +186,9 @@ body {
 }
 
 @keyframes rotateAboutCenter {
-	0%   {transform: translate(-50%, -50%) rotate(0deg) translate(-150px);}
-	100% {transform: translate(-50%, -50%) rotate(360deg) translate(-150px);}
+	0%   {transform: translate(-50%, -50%) rotate(0deg) translate(-160px);}
+	25%  {transform: translate(-50%, -50%) rotate(90deg) translate(-160px);}
+	50%  {transform: translate(-50%, -50%) rotate(180deg) translate(-160px);}
+	75%  {transform: translate(-50%, -50%) rotate(270deg) translate(-160px);}
+	100% {transform: translate(-50%, -50%) rotate(360deg) translate(-160px);}
 }
