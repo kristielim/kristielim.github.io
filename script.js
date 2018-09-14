@@ -1,9 +1,11 @@
+/*
 var isMobile;
 var FADE_TIME = 500;
 
 function attachEventHandlers() {
 
 }
+*/
 
 /*	$('.closebtn').on('click', closeOverlay);
 	$('.img-proj').on('click', handleImageClick); // when a div with the class image is clicked, do the function handleImageClick
@@ -88,14 +90,36 @@ function handleImageClick(event) {
 	
 }
 */
-
+/*
 $('document').ready(function() {
 
 	attachEventHandlers();
 	isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
-	const lilypadBackground = $('.lilypad:before');
-	lilypadBackground.css('z-index', '1');
+	$('body').ripples();
+	*/
 
 
+$(document).ready(function() {
+	try {
+		$('body').ripples({
+			resolution: 512,
+			dropRadius: 20, //px
+			perturbance: 0.04,
+		});
+	}
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('body');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 20;
+		var strength = 0.04 + Math.random() * 0.04;
+
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 500);
 });
