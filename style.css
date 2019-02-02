@@ -5,7 +5,11 @@
 }
 
 body {
-	background-color: #CCE9FF;
+	background-image: url("images/pond.png");
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
 .lilypad-container {
@@ -42,6 +46,8 @@ body {
 
 	background-image: url("images/lilypad.png");
 	background-size: contain;
+
+	opacity: 0.9;
 
 	animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
 	-webkit-animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
@@ -94,11 +100,16 @@ body {
 	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
 	font-size: 48px;
 	text-align: center;
+	text-decoration: none;
 
 	-webkit-transition: transform 0.5s;
 	-webkit-transition-timing-function: ease-out;
 	transition: transform 0.5s;
 	transition-timing-function: ease-out;
+}
+
+.lilypad-text:visited {
+	color: black;
 }
 
 .lilypad-text:hover {
@@ -114,6 +125,8 @@ body {
 	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
 	text-align: center;
 	z-index: -1;
+	color: white;
+	text-shadow: 0px 0px 8px black;
 }
 
 .name-first {
@@ -139,6 +152,7 @@ body {
 	background-image: url("images/flower.png");
 	height: 150px;
 	width: 150px;
+	opacity: 0.9;
 	position: absolute;
 
 	animation: rotateAboutCenter 160s cubic-bezier(.6, 0, .3, 1) infinite;
