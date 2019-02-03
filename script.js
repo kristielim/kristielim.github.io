@@ -1,4 +1,3 @@
-var isMobile;
 var FADE_TIME = 600;
 
 function showAboutMe() {
@@ -21,7 +20,6 @@ function attachEventHandlers() {
 
 $(document).ready(function() {
 	attachEventHandlers();
-	isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
 	try {
 		$('body').ripples({
