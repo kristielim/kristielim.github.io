@@ -222,22 +222,19 @@ body {
 .about-text {
 	text-align: justify;
 	text-justify: distribute;
-	background-color: rgba(0, 0, 0, 0.3);
-	color: white;
+	color: black;
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 26px;
-	line-height: 1.5;
+	font-size: 24px;
 	margin: 20px 100px;
 	padding: 40px;
-	text-shadow: 0px 0px 8px black;
 }
 
 .about-link {
-	color: white;
+	color: black;
 }
 
 .about-link:visited {
-	color: white;
+	color: black;
 }
 
 #back-lilypad {
