@@ -1,8 +1,24 @@
 var isMobile;
-var FADE_TIME = 500;
+var FADE_TIME = 600;
+
+function showAboutMe() {
+	$('.home').fadeOut(FADE_TIME, function () {
+		$('.about').fadeIn(FADE_TIME);
+	});
+}
+
+function showHome() {
+	$('.about').fadeOut(FADE_TIME, function () {
+		$('.home').fadeIn(FADE_TIME);
+	});
+}
 
 function attachEventHandlers() {
-	$('.closebtn').on('click', closeOverlay);
+	$('#about-me-text').on('click', showAboutMe);
+	$('#back-button').on('click', showHome);
+}
+
+/*	$('.closebtn').on('click', closeOverlay);
 	$('.img-proj').on('click', handleImageClick); // when a div with the class image is clicked, do the function handleImageClick
 	$('ul.navbar-nav.nav').on('click', function() {
 		if(isMobile.matches){
@@ -73,9 +89,6 @@ function handleImageClick(event) {
 		linkLabel.fadeIn(FADE_TIME);
 
 		if(isMobile.matches) {
-			/*$('html, body').animate({
-        		scrollTop: parseInt($("#project").offset().top)
-   			}, 1000); no longer needed with overlay*/
    			$('#overlay').css('width', '100vw');
    			$('#overlay').css('margin-left', '-50vw');
    			$('.overlay-text').css('margin','6vh 1vw');
@@ -87,14 +100,40 @@ function handleImageClick(event) {
 	}
 	
 }
-
+*/
+/*
 $('document').ready(function() {
 
 	attachEventHandlers();
-	$('#overlay').hide();
-	$('.proj-desc').hide();
-	$('.proj-name').text("Click on a bubble!");
-	$('.proj-more').hide();
 	isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
+	$('body').ripples();
+	*/
+
+
+$(document).ready(function() {
+	attachEventHandlers();
+	isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+	try {
+		$('body').ripples({
+			resolution: 512,
+			dropRadius: 20, //px
+			perturbance: 0.04,
+		});
+	}
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('body');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 20;
+		var strength = 0.04 + Math.random() * 0.04;
+
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 500);
 });
