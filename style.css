@@ -6,10 +6,6 @@
 
 body {
 	background-color: #CCE9FF;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size: cover;
 }
 
 .lilypad-container {
@@ -239,10 +235,6 @@ body {
 	#back-lilypad {
 		top: 10px;
 		left: 10px;
-	}
-
-	body {
-		background-size: auto;
 	}
 
 	.small-flower-container {
