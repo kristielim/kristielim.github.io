@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" href="myfavicon.ico" type="image/x-icon">
 	
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300" rel="stylesheet">
 
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script src="jquery.ripples-min.js"></script>
@@ -17,6 +17,24 @@
 </head>
 <body>
 	<div class="home">
+
+		<div class="flower" id="flower-1"></div>
+		<div class="flower" id="flower-2"></div>
+		<div class="flower" id="flower-3"></div>
+		<div class="flower" id="flower-4"></div>
+
+		<div class="name">
+			<div class="name-first">Kristie</div>
+			<div class="name-last">Lim</div>
+		</div>
+
+		<div class="small-flower-container">
+			<div class="small-flower flower-1"></div>
+			<div class="small-flower flower-2"></div>
+			<div class="small-flower"></div>
+		</div>
+		
+
 		<div class="lilypad-container">
 				<div class="lilypad" id="lilypad-1">
 					<div class="lilypad-icon" id="about-me"></div>
@@ -24,37 +42,31 @@
 				</div>
 				<div class="lilypad" id="lilypad-2">
 					<div class="lilypad-icon" id="projects"></div>
-					<a class="lilypad-text" href="https://github.com/kristielim">Projects</a>
+					<a class="lilypad-text link" href="https://github.com/kristielim">Projects</a>
 				</div>
 				<div class="lilypad" id="lilypad-3">
 					<div class="lilypad-icon" id="experience"></div>
-					<a class="lilypad-text" href="https://www.linkedin.com/in/kristielim/">Experience</a>
+					<a class="lilypad-text link" href="https://www.linkedin.com/in/kristielim/">Experience</a>
 				</div>
 				<div class="lilypad" id="lilypad-4">
 					<div class="lilypad-icon" id="contact"></div>
-					<a class="lilypad-text" href="mailto:kristielim@ucla.edu">Contact</a>
+					<a class="lilypad-text link" href="mailto:kristielim@ucla.edu">Contact</a>
 				</div>
 		</div>
-	
-	
-			<div class="name">
-				<!--TODO: reduce size of name when mobile-->
-				<div class="name-first">Kristie</div>
-				<div class="name-last">Lim</div>
-			</div>
-	
-	
-		<div class="flower" id="flower-1"></div>
-		<div class="flower" id="flower-2"></div>
-		<div class="flower" id="flower-3"></div>
-		<div class="flower" id="flower-4"></div>
 	</div>
 	<div class="about">
 		<div class="about-container">
-			<button id="back-button">Back</button>
+			<div class="lilypad" id="back-lilypad">
+				<div class="lilypad-text" id="back-button">Back</div>
+			</div>
 			<img class="about-image" src="images/photo.jpeg"/>
-			<div class="about-text">
-				Hi! My name's Kristie and I'm a Computer Science major at UCLA. 
+			<div class="about-text">		
+				I'm currently a second year Computer Science major at UCLA.
+				This summer I'll be a software engineer intern at <a class="about-link" href="https://amplitude.com/">Amplitude</a>. 
+				Previously I was an intern at Fidelity Investments. 
+				I have also been the director of <a class="about-link" href="https://github.com/uclaacm/hackschool-f18">Hackschool</a>, an introduction to web development series hosted by 
+				<a class="about-link" href="http://www.uclaacm.com/">ACM at UCLA</a>. 
+				In my free time, I like to <a class="about-link" href="https://www.strava.com/athletes/26942679">run and bike</a>.		
 			</div>
 		</div>
 	</div>

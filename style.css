@@ -9,7 +9,7 @@ body {
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-  	background-size: cover;
+	background-size: cover;
 }
 
 .lilypad-container {
@@ -180,6 +180,27 @@ body {
 	-webkit-animation-delay: -160s;
 }
 
+.small-flower {
+	height: 100px;
+	width: 100px;
+	animation: bob 15s linear infinite;
+	-webkit-animation: bob 15s linear infinite;
+}
+
+.small-flower-container {
+	display: none;
+}
+
+.small-flower:before {
+	content: "";
+	background-size: contain;
+	background-image: url("images/flower.png");
+	height: 100px;
+	width: 100px;
+	opacity: 0.9;
+	position: absolute;
+}
+
 .about {
 	display: none;
 }
@@ -187,15 +208,97 @@ body {
 .about-container {
 	width: 100vw;
 	height: 100vh;
-	display: grid;
-	grid-template-columns: auto auto;
-	justify-content: space-around;
-	align-content: space-around;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .about-image {
 	height: 300px;
+	width: 300px;
 	border-radius: 50%;
+	margin-top: 40px;
+}
+
+.about-text {
+	text-align: justify;
+	text-justify: distribute;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 26px;
+	line-height: 1.5;
+	margin: 20px 100px;
+	padding: 40px;
+	text-shadow: 0px 0px 8px black;
+}
+
+.about-link {
+	color: white;
+}
+
+.about-link:visited {
+	color: white;
+}
+
+#back-lilypad {
+	height: 100px;
+	width: 100px;
+
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+#back-lilypad:before {
+	height: 100px;
+	width: 100px;
+}
+
+#back-button {
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+	.about-text {
+		margin: 10px;
+		padding: 30px;
+	}
+
+	#back-lilypad {
+		top: 10px;
+		left: 10px;
+	}
+
+	body {
+		background-size: auto;
+	}
+
+	.small-flower-container {
+		display: flex;
+		align-items: center;
+
+		height: 100px;
+	}
+
+	.flower {
+		display: none;
+	}
+
+	.lilypad-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+
+	.name {
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
+		margin: 30px;
+	}
 }
 
 /* Safari 4.0 - 8.0 */
