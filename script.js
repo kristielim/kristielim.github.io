@@ -26,6 +26,7 @@ $(document).ready(function() {
 		$('body').ripples({
 			dropRadius: 20, //px
 			perturbance: 0.02,
+			interactive: false
 		});
 	}
 	catch (e) {
