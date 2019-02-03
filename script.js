@@ -26,7 +26,6 @@ $(document).ready(function() {
 		$('body').ripples({
 			dropRadius: 20, //px
 			perturbance: 0.02,
-			interactive: false
 		});
 	}
 	catch (e) {
@@ -42,5 +41,5 @@ $(document).ready(function() {
 		var strength = 0.04 + Math.random() * 0.04;
 
 		$el.ripples('drop', x, y, dropRadius, strength);
-	}, 5000);
+	}, 2000);
 });
