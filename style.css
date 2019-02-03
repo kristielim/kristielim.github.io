@@ -47,8 +47,6 @@ body {
 	background-image: url("images/lilypad.png");
 	background-size: contain;
 
-	opacity: 0.9;
-
 	animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
 	-webkit-animation: rotate 80s cubic-bezier(.23,.05,.5,.94) infinite;
 }
@@ -151,7 +149,6 @@ body {
 	background-image: url("images/flower.png");
 	height: 150px;
 	width: 150px;
-	opacity: 0.9;
 	position: absolute;
 
 	animation: rotateAboutCenter 160s cubic-bezier(.6, 0, .3, 1) infinite;
@@ -195,7 +192,6 @@ body {
 	background-image: url("images/flower.png");
 	height: 100px;
 	width: 100px;
-	opacity: 0.9;
 	position: absolute;
 }
 
@@ -225,7 +221,7 @@ body {
 	color: black;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 24px;
-	margin: 20px 100px;
+	width: 600px;
 	padding: 40px;
 }
 
@@ -257,8 +253,7 @@ body {
 
 @media only screen and (max-width: 600px) {
 	.about-text {
-		margin: 10px;
-		padding: 30px;
+		width: 95vw;
 	}
 
 	#back-lilypad {

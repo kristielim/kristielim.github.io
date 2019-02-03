@@ -4,6 +4,7 @@ var FADE_TIME = 600;
 function showAboutMe() {
 	$('.home').fadeOut(FADE_TIME, function () {
 		$('.about').fadeIn(FADE_TIME);
+		$(window).scrollTop(0);
 	});
 }
 
@@ -41,5 +42,5 @@ $(document).ready(function() {
 		var strength = 0.04 + Math.random() * 0.04;
 
 		$el.ripples('drop', x, y, dropRadius, strength);
-	}, 2000);
+	}, 1000);
 });
