@@ -1,11 +1,22 @@
-/*
 var isMobile;
-var FADE_TIME = 500;
+var FADE_TIME = 600;
+
+function showAboutMe() {
+	$('.home').fadeOut(FADE_TIME, function () {
+		$('.about').fadeIn(FADE_TIME);
+	});
+}
+
+function showHome() {
+	$('.about').fadeOut(FADE_TIME, function () {
+		$('.home').fadeIn(FADE_TIME);
+	});
+}
 
 function attachEventHandlers() {
-
+	$('#about-me-text').on('click', showAboutMe);
+	$('#back-button').on('click', showHome);
 }
-*/
 
 /*	$('.closebtn').on('click', closeOverlay);
 	$('.img-proj').on('click', handleImageClick); // when a div with the class image is clicked, do the function handleImageClick
@@ -101,6 +112,9 @@ $('document').ready(function() {
 
 
 $(document).ready(function() {
+	attachEventHandlers();
+	isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
 	try {
 		$('body').ripples({
 			resolution: 512,

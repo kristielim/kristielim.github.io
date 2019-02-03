@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url("images/pond.png");
+	background-image: url("images/darkpond.png");
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -97,6 +97,7 @@ body {
 }
 
 .lilypad-text {
+	color: black;
 	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
 	font-size: 48px;
 	text-align: center;
@@ -177,6 +178,24 @@ body {
 #flower-4, #flower-4:before {
 	animation-delay: -160s;
 	-webkit-animation-delay: -160s;
+}
+
+.about {
+	display: none;
+}
+
+.about-container {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+.about-image {
+	height: 300px;
+	border-radius: 50%;
 }
 
 /* Safari 4.0 - 8.0 */
