@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url("images/darkpond.png");
+	background-color: #CCE9FF;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -125,8 +125,7 @@ body {
 	transform: translate(-50%, -50%);
 	font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
 	text-align: center;
-	color: white;
-	text-shadow: 0px 0px 8px black;
+	color: black;
 }
 
 .name-first {
@@ -217,6 +216,7 @@ body {
 	width: 300px;
 	border-radius: 50%;
 	margin-top: 40px;
+	border: 1px;
 }
 
 .about-text {
