@@ -127,28 +127,28 @@ body {
 	width: 150px;
 	position: absolute;
 
-	animation: rotateAboutCenter 160s cubic-bezier(.6, 0, .3, 1) infinite;
-	-webkit-animation: rotateAboutCenter 160s cubic-bezier(.6, 0, .3, 1) infinite;
+	animation: rotateAboutCenter 80s cubic-bezier(.6, 0, .3, 1) infinite;
+	-webkit-animation: rotateAboutCenter 80s cubic-bezier(.6, 0, .3, 1) infinite;
 }
 
 .delay-1, .delay-1:before {
+	animation-delay: -20s !important;
+	-webkit-animation-delay: -20s !important;
+}
+
+.delay-2, .delay-2:before {
 	animation-delay: -40s !important;
 	-webkit-animation-delay: -40s !important;
 }
 
-.delay-2, .delay-2:before {
-	animation-delay: -80s !important;
-	-webkit-animation-delay: -80s !important;
-}
-
 .delay-3, .delay-3:before {
-	animation-delay: -120s !important;
-	-webkit-animation-delay: -120s !important;
+	animation-delay: -60s !important;
+	-webkit-animation-delay: -60s !important;
 }
 
 .delay-4, .delay-4:before {
-	animation-delay: -160s !important;
-	-webkit-animation-delay: -160s !important;
+	animation-delay: -80s !important;
+	-webkit-animation-delay: -80s !important;
 }
 
 .small-flower {
